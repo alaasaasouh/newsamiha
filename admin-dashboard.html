@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Samiha Zeindine Admin Dashboard">
+  <title>Samiha Zeindine - Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Header Bar -->
+  <div class="top-header">
+    <div class="top-header-left">
+      <span class="separator">|</span>
+    </div>
+    <div class="top-header-right">
+      <select class="language-selector" id="languageSelect">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="fr">Français</option>
+      </select>
+      <a href="https://www.facebook.com/lifecoachbysamiha" target="_blank" rel="noopener noreferrer" class="social-btn fb-btn" title="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/lifecoach.samiha" target="_blank" rel="noopener noreferrer" class="social-btn instagram-btn" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="index.html" class="login-btn" data-i18n="home">Home</a>
+      <a href="user-dashboard.html" class="signup-btn" data-i18n="userDashboard">User Dashboard</a>
+      <a href="login.html" class="login-btn" data-i18n="logout">Logout</a>
+    </div>
+  </div>
+
+  <div class="dashboard-layout">
+    <!-- Left Sidebar (Admin Navigation) -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <button class="close-sidebar-btn" id="closeSidebarBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="avatar">SZ</div>
+        <div class="user-info">
+          <p class="welcome-text">Welcome, Admin</p>
+          <p class="subtitle">Control Panel</p>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-section="dashboard">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span> Dashboard
+        </a>
+        <a href="#" class="nav-item" data-section="users">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span> Users / Clients
+        </a>
+        <a href="#" class="nav-item" data-section="sessions">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span> One-to-One Sessions
+        </a>
+        <a href="#" class="nav-item" data-section="tests">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span> Personality Test Results
+        </a>
+        <a href="#" class="nav-item" data-section="questions">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span> Questions for Samiha
+        </a>
+        <a href="#" class="nav-item" data-section="personalized">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"></path></svg></span> Personalized Questions
+        </a>
+        <a href="#" class="nav-item" data-section="courses">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span> Courses & Programs
+        </a>
+        <a href="#" class="nav-item" data-section="payments">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></span> Payments & Invoices
+        </a>
+        <a href="#" class="nav-item" data-section="messages">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></span> Messages & Notifications
+        </a>
+        <a href="#" class="nav-item" data-section="settings">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0-.33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 .33 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span> Settings
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Header Bar -->
+      <header class="dashboard-header">
+        <button class="hamburger-menu" id="hamburgerMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <h1 class="page-title" id="pageTitle">Da<div class="header-right">
+          <a href="#" class="nav-item" data-section="dashboard" data-i18n="dashboard" style="margin-right: 15px;">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span> <span data-i18n-text="dashboard">Home</span>
+          </a>
+          <a href="login.html" class="nav-item logout-btn" data-i18n="logOut" style="margin-right: 15px;">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg></span> <span data-i18n-text="logOut">Log Out</span>
+          </a>
+          <div class="language-selector"></div>
+        </div>
+      </header>
+
+      <!-- Content Sections -->
+      <div class="content-sections">
+        <!-- Admin Dashboard Home -->
+        <section id="dashboard" class="content-section active">
+          <!-- A. Welcome Section -->
+          <div class="card welcome-card">
+            <h2 data-i18n="welcomeBackAdmin">Welcome back, Admin</h2>
+            <p data-i18n="overviewPlatform">Here’s an overview of your platform today.</p>
+            <p class="date-info">Today: <span id="welcomeDate">18 November 2025</span></p>
+          </div>
+
+          <!-- B. Quick Statistics Cards -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+              <p class="stat-number">1,248</p>
+              <p class="stat-label" data-i18n="totalUsers">Total Users</p>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
+              <p class="stat-number">32</p>
+              <p class="stat-label" data-i18n="sessionsBookedWeek">Sessions Booked This Week</p>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span>
+              <p class="stat-number">5</p>
+              <p class="stat-label" data-i18n="pendingQuestions">Pending Questions for Samiha</p>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span>
+              <p class="stat-number">18</p>
+              <p class="stat-label" data-i18n="personalityTestsCompleted">Personality Tests Completed</p>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M12 14l-6-3 6-3 6 3-6 3zM12 14l-6 3 6 3 6-3-6-3zM12 8l-6 3 6 3 6-3-6-3z"></path></svg></span>
+              <p class="stat-number">12</p>
+              <p class="stat-label" data-i18n="newCourseEnrollments">New Course Enrollments</p>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.3 12 11 20.73 6.3"></polyline><path d="M12 22.08V11"></path></svg></span>
+              <p class="stat-number">$4,250</p>
+              <p class="stat-label" data-i18n="revenueThisMonth">Payments This Month</p>
+            </div>
+          </div>
+
+          <!-- C. Two-column layout -->
+          <div class="two-column-grid">
+            <!-- LEFT COLUMN – Activity & Management -->
+            <div class="column-left">
+              <!-- Today’s Schedule -->
+              <div class="card">
+                <h3 data-i18n="todaySchedule">Today’s Schedule</h3>
+                <p class="card-subtitle" data-i18n="sessionsBookedToday">Sessions booked for today.</p>
+                <ul class="schedule-list">
+                  <li>
+                    <span data-i18n="marieBelle">Marie Belle</span>
+                    <span data-i18n="threePm">3:00 PM</span>
+                    <span class="session-type" data-i18n="oneToOneOnline">One-to-One Online</span>
+                    <button class="btn-small" data-i18n="view">View</button>
+                  </li>
+                  <li>
+                    <span data-i18n="joeD">Joe D.</span>
+                    <span data-i18n="fourThirtyPm">4:30 PM</span>
+                    <span class="session-type" data-i18n="inPerson">In-person</span>
+                    <button class="btn-small" data-i18n="view">View</button>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Pending Approvals -->
+              <div class="card">
+                <h3 data-i18n="pendingApprovals">Pending Approvals</h3>
+                <ul class="approval-list">
+                  <li>
+                    <span data-i18n="newUserApproval">New user waiting for manual confirmation</span>
+                    <span class="date">5 min ago</span>
+                    <button class="btn-small" data-i18n="review">Review</button>
+                  </li>
+                  <li>
+                    <span data-i18n="questionWaitingAnswer">Question still waiting for an answer from Samiha</span>
+                    <span class="date">2 hours ago</span>
+                    <button class="btn-small" data-i18n="writeAnswer">Write Answer</button>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Recent User Activity -->
+              <div class="card">
+                <h3 data-i18n="recentActivity">Recent Activity</h3>
+                <ul class="activity-list">
+                  <li data-i18n="activitySarahSignedUp">Sarah K. signed up <span class="timestamp">5 min ago</span></li>
+                  <li data-i18n="activityLinaCompletedTest">Lina A. completed the personality test <span class="timestamp">2 hours ago</span></li>
+                  <li data-i18n="activityMayaStartedCourse">Maya T. started the course ‘Healing After Divorce’ <span class="timestamp">Yesterday</span></li>},{find:
+                  <li data-i18n="activityJoeBookedSession">Joe D. booked a new session <span class="timestamp">Yesterday</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN – Tools & Shortcuts -->
+            <div class="column-right">
+              <!-- Quick Create Buttons -->
+              <div class="card">
+                <h3 data-i18n="quickActions">Quick Actions</h3>
+                <div class="quick-actions-grid">
+                  <b<button class="btn-full" onclick="alert('Add New Course action')" data-i18n="addNewCourse">Add New Course</button>
+                  <b<button class="btn-full" onclick="alert('Add New Session Slot action')" data-i18n="addNewSessionSlot">Add New Session Slot</button>
+                  <b<button class="btn-full" onclick="alert('Send Personalized Questions action')" data-i18n="sendPersonalizedQuestions">Send Personalized Questions</button>
+                  <b<button class="btn-full" onclick="alert('Add Admin Note action')" data-i18n="addAdminNote">Add Admin Note</button>
+                </div>
+              </div>
+
+              <!-- Notifications Panel -->
+              <div class="card">
+                <h3 data-i18n="notifications">Notifications</h3>
+                <ul class="notification-list">
+                  <li>
+                    <span class="alert-<span data-i18n="notificationNewQuestion">New question submitted (From Marie: ‘How do I set boundaries?’)</span>
+                    <span class="timestamp">Just now</span>
+                  </li>
+                  <li>
+                    <span class="alert-te<span data-i18n="notificationNewBooking">New booking created (Joe D.)</span>                   <span class="timestamp">1 hour ago</span>
+                  </li>
+                  <li>
+                    <span class="alert-t<span data-i18n="notificationPaymentReceived">Payment received from Y</span>                    <span class="timestamp">2 hours ago</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mini Calendar Widget -->
+              <div class="card">
+                <h3 data-i18n="miniCalendar">Mini Calendar</h3>
+                <div class="mini-calendar">
+                  <!-- Static Calendar Placeholder -->
+                  <div class="calendar-placeholder">
+                    <p>Nov 2025</p>
+                    <div class="days-grid">
+                      <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+                      <span></span><span></span><span></span><span></span><span></span><span>1</span><span>2</span>
+                      <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                      <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+                      <span>17</span><span class="today">18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+                      <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+                    </div>
+                  </div>
+                  <ul class="calendar-notes">
+                    <li data-i18n="calendarNoteSession">Next session: Today at 4 PM with Marie</li>
+                    <li data-i18n="calendarNoteCourse">Next course content release: Tomorrow</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Placeholder Sections for Inner Pages -->
+        <section id="users" class="content-section hidden">
+          <h2 data-i18n="usersClients">Users / Clients</h2>
+          <p data-i18n="usersPlaceholder">Table of users with search, filter, and profile view buttons.</p>
+        </section>
+        <section id="sessions" class="content-section hidden">
+          <h2 data-i18n="oneToOneSessions">One-to-One Sessions</h2>
+          <p data-i18n="sessionsPlaceholder">List of sessions with status and action buttons (Approve, Reschedule, Cancel).</p>
+        </section>
+        <section id="tests" class="content-section hidden">
+          <h2 data-i18n="personalityTestResults">Personality Test Results</h2>
+          <p data-i18n="testResultsPlaceholder">List of test results with details and export buttons.</p>
+        </section>
+        <section id="questions" class="content-section hidden">
+          <h2 data-i18n="questionsForSamiha">Questions for Samiha</h2>
+          <p data-i18n="questionsPlaceholder">List of pending and answered questions with "Write Answer" button.</p>
+        </section>
+        <section id="personalized" class="content-section hidden">
+          <h2 data-i18n="personalizedQuestions">Personalized Questions</h2>
+          <p data-i18n="personalizedPlaceholder">Form to send custom questions and list of previously sent packs.</p>
+        </section>
+        <section id="courses" class="content-section hidden">
+          <h2 data-i18n="coursesPrograms">Courses & Programs</h2>
+          <p data-i18n="coursesPlaceholder">List of courses with enrollment numbers and edit/add buttons.</p>
+        </section>
+        <section id="payments" class="content-section hidden">
+          <h2 data-i18n="paymentsInvoices">Payments & Invoices</h2>
+          <p data-i18n="paymentsPlaceholder">Table of payments with status and "Download Invoice" button.</p>
+        </section>
+        <section id="messages" class="content-section hidden">
+          <h2 data-i18n="messagesNotifications">Messages & Notifications</h2>
+          <p data-i18n="messagesPlaceholder">List of recent system messages and email reminders.</p>
+        </section>
+        <section id="settings" class="content-section hidden">
+          <h2 data-i18n="settings">Settings</h2>
+          <p data-i18n="settingsPlaceholder">Basic settings fields (Platform name, Logo, Color picker, Admin profile).</p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Samiha Zeindine User Dashboard">
+  <title>Samiha Zeindine - Client Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Header Bar -->
+  <div class="top-header">
+    <div class="top-header-left">
+  
+      <span class="separator">|</span>
+ 
+    </div>
+    <div class="top-header-right">
+      <select class="language-selector" id="languageSelect">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="fr">Français</option>
+      </select>
+      <a href="https://www.facebook.com/lifecoachbysamiha" target="_blank" rel="noopener noreferrer" class="social-btn fb-btn" title="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/lifecoach.samiha" target="_blank" rel="noopener noreferrer" class="social-btn instagram-btn" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="index.html" class="login-btn" data-i18n="home">Home</a></a>
+      <a hr<a href="admin-dashboard.html" class="signup-btn" data-i18n="adminDashboard">Admin Dashboard</a></a>
+      <a href="login.html" class="login-btn" data-i18n="logout">Logout</a></a>
+    </div>
+  </div>
+
+  <div class="dashboard-layout">
+    <!-- Left Sidebar (User Navigation) -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <button class="close-sidebar-btn" id="closeSidebarBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="avatar">MB</div>
+        <div class="user-info">
+          <p class="welcome-text" data-i18n="welcomeBackMarie">Hi, Marie</p>
+          <p class="subtitle" data-i18n="clientPortal">Client Portal</p>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-section="dashboard">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span> Dashboard
+        </a>
+        <a href="#" class="nav-item" data-section="users">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span> Users / Clients
+        </a>
+        <a href="#" class="nav-item" data-section="sessions">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span> One-to-One Sessions
+        </a>
+        <a href="#" class="nav-item" data-section="tests">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span> Personality Test Results
+        </a>
+        <a href="#" class="nav-item" data-section="questions">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span> Questions for Samiha
+        </a>
+        <a href="#" class="nav-item" data-section="personalized">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"></path></svg></span> Personalized Questions
+        </a>
+        <a href="#" class="nav-item" data-section="courses">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span> Courses & Programs
+        </a>
+        <a href="#" class="nav-item" data-section="payments">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></span> Payments & Invoices
+        </a>
+        <a href="#" class="nav-item" data-section="messages">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></span> Messages & Notifications
+        </a>
+        <a href="#" class="nav-item" data-section="settings">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0-.33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 .33 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span> Settings
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Header Bar -->
+      <header class="dashboard-header">
+        <button class="hamburger-menu" id="hamburgerMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <h1 class="page-title" id="pageTitle">Da<div class="header-right">
+          <a href="#" class="nav-item" data-section="dashboard" data-i18n="dashboard" style="margin-right: 15px;">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span> <span data-i18n-text="dashboard">Home</span>
+          </a>
+          <a href="login.html" class="nav-item logout-btn" data-i18n="logOut" style="margin-right: 15px;">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg></span> <span data-i18n-text="logOut">Log Out</span>
+          </a>
+          <div class="language-selector"></div>
+        </div>
+      </header>
+
+      <!-- Content Sections -->
+      <div class="content-sections">
+        <!-- User Dashboard Home -->
+        <section id="dashboard" class="content-section active">
+          <!-- A. Welcome Section -->
+          <div class="card welcome-card user-welcome">
+            <h2 data-i18n="welcomeBackMarie">Welcome back, Marie</h2>
+            <p data-i18n="currentProgress">Here is your current progress and what’s coming next.</p>
+            <p class="motivational-quote" data-i18n="motivationalQuote">“One step at a time, you’re growing.”</p>
+          </div>
+
+          <!-- B. Quick Overview Cards -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <h4 data-i18n="nextSession">Next Session</h4>
+              <p data-i18n="tomorrow3pm">Tomorrow, 3:00 PM</p>
+              <p class="card-subtitle" data-i18n="oneToOneSessionSamiha">One-to-one session with Samiha</p>
+              <button class="btn-small" data-i18n="viewDetails">View details</button>
+            </div>
+            <div class="stat-card">
+              <h4 data-i18n="personalityTest">Personality Test</h4>
+              <p data-i18n="testCompleted">Completed</p>
+              <button class="btn-small" data-i18n="viewResults">View Results</button>
+            </div>
+            <div class="stat-card">
+              <h4 data-i18n="myQuestions">My Questions</h4>
+              <p data-i18n="questionsWaitingReply">2 questions waiting for reply</p>
+              <button class="btn-small" data-i18n="viewMyQuestions">View my questions</button>
+            </div>
+            <div class="stat-card">
+              <h4 data-i18n="myCourses">My Courses</h4>
+              <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 40%;"></div>
+              </div>
+              <p data-i18n="progressCourse">You’re 40% through ‘Healing After Divorce’</p>
+              <button class="btn-small" data-i18n="continueCourse">Continue course</button>
+            </div>
+          </div>
+
+          <!-- C. Two-column layout -->
+          <div class="two-column-grid">
+            <!-- LEFT SIDE – Your Journey & Upcoming Sessions -->
+            <div class="column-left">
+              <div class="card">
+                <h3 data-i18n="yourJourney">Your Journey</h3>
+                <ul class="journey-list">
+                  <li data-i18n="journeyItem1">You completed Module 2 of ‘Independent & Grounded Woman’. <span class="timestamp">Yesterday</span></li>
+                  <li data-i18n="journeyItem2">You answered reflection question: ‘How do I react in conflict?’. <span class="timestamp">2 days ago</span></li>
+                  <li data-i18n="journeyItem3">Personality test: Part 1 completed. <span class="timestamp">4 days ago</span></li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3 data-i18n="upcomingSessions">Upcoming Sessions</h3>
+                <ul class="schedule-list">
+                  <li>
+                    <span data-i18n="tomorrow3pm">Tomorrow, 3:00 PM</span>
+                    <span data-i18n="oneToOneSessionSamiha">1:1 Session with Samiha</span>
+                    <span class="session-type" data-i18n="online">Online</span>
+                    <span class="status confirmed" data-i18n="confirmed">Confirmed</span>
+                    <button class="btn-small" data-i18n="view">View</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- RIGHT SIDE – Quick Actions, Encouragement & Calendar -->
+            <div class="column-right">
+              <div class="card quick-actions-user">
+                <h3 data-i18n="quickActions">Quick Actions</h3>
+                <a href="#" class="action-block" data-i18n="bookSession">Book a Session <span data-i18n="bookSessionDesc">Ready to talk? Schedule your next one-to-one.</span></a>
+                <a href="#" class="action-block" data-i18n="askQuestion">Ask a Question <span data-i18n="askQuestionDesc">Send a private question to Samiha.</span></a>
+                <a href="#" class="action-block" data-i18n="reflectionQuestions">Go to Reflection Questions <span data-i18n="reflectionQuestionsDesc">Continue answering your reflection questions.</span></a>
+              </div>
+              <div class="card encouragement-box">
+                <p data-i18n="encouragementQuote">“Progress is not about perfection, it’s about consistency.”</p>
+                <a href="#" data-i18n="openReflection">Open today’s reflection question</a>
+              </div>
+              <div class="card">
+                <h3 data-i18n="nextKeyDate">Next Key Date</h3>
+                <ul class="calendar-notes">
+                  <li data-i18n="nextSessionTomorrow">Next session: Tomorrow at 3 PM</li>
+                  <li data-i18n="nextCourseReminder">Next course reminder: New module available on Friday</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Placeholder Sections for Inner Pages -->
+        <section id="sessions" class="content-section hidden">
+          <h2 data-i18n="mySessions">My Sessions</h2>
+          <p data-i18n="sessionsPlaceholder">Tabs for Upcoming/Past sessions with details and action buttons.</p>
+        </section>
+        <section id="test" class="content-section hidden">
+          <h2 data-i18n="personalityTest">Personality Test</h2>
+          <p data-i18n="testPlaceholder">Section to start, continue, or view results of the personality test.</p>
+        </section>
+        <section id="reflection" class="content-section hidden">
+          <h2 data-i18n="myReflectionQuestions">My Reflection Questions</h2>
+          <p data-i18n="reflectionPlaceholder">List of questions with text areas for user answers.</p>
+        </section>
+        <section id="ask" class="content-section hidden">
+          <h2 data-i18n="askSamiha">Ask Samiha</h2>
+          <p data-i18n="askPlaceholder">Form to submit questions and view previous answers.</p>
+        </section>
+        <section id="courses" class="content-section hidden">
+          <h2 data-i18n="myCoursesPrograms">My Courses & Programs</h2>
+          <p data-i18n="coursesPlaceholder">Grid of enrolled courses with progress bars.</p>
+        </section>
+        <section id="resources" class="content-section hidden">
+          <h2 data-i18n="resourcesLibrary">Resources / Library</h2>
+          <p data-i18n="resourcesPlaceholder">List of downloadable resources (PDFs, worksheets, etc.).</p>
+        </section>
+        <section id="profile" class="content-section hidden">
+          <h2 data-i18n="profileSettings">Profile & Settings</h2>
+          <p data-i18n="profilePlaceholder">Fields for personal info, preferences, and password change.</p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
