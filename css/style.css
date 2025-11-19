@@ -2405,3 +2405,13 @@
     margin: 0 auto !important;
   }
 }
+/* Force 1-column layout for services cards on mobile */
+@media (max-width: 768px) {
+  .services-cards-grid {
+    grid-template-columns: 1fr !important;  /* one card per row */
+  }
+
+  .services-cards-grid .service-tile {
+    grid-column: auto !important;          /* cancel the 3–2 positioning */
+  }
+}
