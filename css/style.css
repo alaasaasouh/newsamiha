@@ -265,7 +265,7 @@
      min-height: 100vh;
      padding-top: 100px;
      overflow: hidden;
-     background-color: var(--background-medium);
+  background-color: #f7f4f0;
    }
    
    .hero-content-wrapper {
